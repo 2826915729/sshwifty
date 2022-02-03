@@ -3,10 +3,6 @@
   "description": "sshwifty Web SSH & Telnet Client",
   "repository": "https://github.com/2826915729/sshwifty",
   "env": {
-    "SSHWIFTY_SHAREDKEY": {
-       "description": "WEB ACCESS PASSWORD",
-       "value": "password"
-    },
     "SSHWIFTY_LISTENPORT": {
        "value": "SSHWIFTY_ENV_RENAMED:PORT"
     }
