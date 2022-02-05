@@ -1,7 +1,7 @@
 {
   "name": "sshwifty",
   "description": "sshwifty Web SSH & Telnet Client",
-  "repository": "https://github.com/2826915729/sshwifty",
+  "repository": "https://github.com/2826915729/sshwifty-onekeyHeroku",
   "env": {
     "SSHWIFTY_LISTENPORT": {
        "value": "SSHWIFTY_ENV_RENAMED:PORT"
