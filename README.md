@@ -1,5 +1,5 @@
 # Sshwifty Web SSH & Telnet Client
-[中文](https://github.com/nirui/sshwifty/README-zh.md) | [English](https://github.com/nirui/sshwifty/README.md)
+[中文](https://github.com/2826915729/sshwifty-onekeyHeroku/blob/master/README-zh.md) | [English](https://github.com/2826915729/sshwifty-onekeyHeroku/blob/master/README.md)
 
 **Sshwifty is a SSH and Telnet connector made for the Web.** It can be deployed
 on your computer or server to provide SSH and Telnet access interface for any
