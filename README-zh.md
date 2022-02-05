@@ -1,5 +1,5 @@
 # Sshwifty Web SSH & Telnet Client 
-[中文](https://github.com/nirui/sshwifty/README-zh.md) | [English](https://github.com/nirui/sshwifty/README.md)
+[中文](https://github.com/2826915729/sshwifty-onekeyHeroku/blob/master/README-zh.md) | [English](https://github.com/2826915729/sshwifty-onekeyHeroku/blob/master/README.md)
 
 **Sshwifty是为Web浏览器制作的SSH和Telnet连接客户端。** 它可以部署在您的计算机或服务器上，为任何兼容（标准）的Web浏览器提供SSH和Telnet访问接口。
 
