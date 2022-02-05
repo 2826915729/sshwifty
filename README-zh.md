@@ -1,5 +1,7 @@
-# Sshwifty Web SSH & Telnet Client
-**Sshwifty是为Web制作的SSH和Telnet连接器。** 它可以部署在您的计算机或服务器上，为任何兼容（标准）的Web浏览器提供SSH和Telnet访问接口。
+# Sshwifty Web SSH & Telnet Client 
+[中文](https://github.com/nirui/sshwifty/README-zh.md) | [English](https://github.com/nirui/sshwifty/README.md)
+
+**Sshwifty是为Web浏览器制作的SSH和Telnet连接客户端。** 它可以部署在您的计算机或服务器上，为任何兼容（标准）的Web浏览器提供SSH和Telnet访问接口。
 
 ![Web Interface](Screenshot.png)
 
@@ -9,7 +11,7 @@
 
 ### 二进制文件
 
-编译好的二进制文件可以在页面的 [release] 部分找到。
+编译好的二进制文件可以在作者页面的 [release](https://github.com/nirui/sshwifty/releases) 部分找到。
 
 请注意，这些二进制文件是由自动过程生成的，本项目的作者不会验证它们是否有效。您必须自行尝试风险。
 
@@ -25,7 +27,7 @@ $ docker run --detach \
   niruix/sshwifty:latest
 ```
 
-如果需要使用 TLS，但您不想设置 Docker 的值，则可以使用`SSHWIFTY_DOCKER_TLSCERT`和`SSHWIFTY_DOCKER_TLSCERTKEY` 环境变量将凭据文件导入容器并自动应用它们：
+如果需要使用 TLS，但您不想设置 Docker 的值，则可以使用`SSHWIFTY_DOCKER_TLSCERT`和`SSHWIFTY_DOCKER_TLSCERTKEY` 环境变量将TSL凭据文件导入容器并自动应用它们：
 
 ```
 $ openssl req \
@@ -44,7 +46,7 @@ $ docker run --detach \
 为了从源代码构建软件，需要以下工具：
 
 - `git`下载源代码
-- `node`并构建前端应用程序npm
+- `node`并构建前端应用程序`npm`
 - `go`构建后端应用程序
 
 要启动构建过程，请执行：
@@ -62,17 +64,22 @@ $ npm run build
 
 ## 在云端上部署
 
+### 一键部署到heroku
+先fork到自己的仓库，再自行修改`README-zh.md`中的 `2826915729` 改为自己的名称
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/2826915729/sshwifty-onekeyHeroku)
 
-要将此项目部署到云端，例如`Google App Engine`或`Heroku`，您需要先下载源代码，然后在部署之前在本地生成它。
+### 手动部署
+
+要将此项目手动部署到云端，例如`Google App Engine`或`Heroku`，您需要先下载源代码，然后在部署之前在本地生成它需要的静态文件。
 
 `npm run generate` 命令将生成所有静态文件，并自动调用`go generate ./...`将这些静态文件直接绑定到程序源代码中。您需要这些生成的源代码才能使软件正常运行。
 
 尝试将未生成的代码直接部署到云中将导致失败，因为缺少所需的源代码。
 
-另请记住，如果基于`git`云部署过程，则可能必须修改`.gitignore`文件才能上传所有必需的文件。
+另请记住，如果基于`git`的云端部署过程，则可能必须修改`.gitignore`文件才能上传所有必需的文件。
 
-### 配置
+### 配置Sshwifty
 
 Sshwifty 可以通过文件或环境变量进行配置。默认情况下，配置加载程序将首先尝试从默认路径加载文件，失败时，将会使用环境变量。
 
@@ -307,11 +314,11 @@ SSHWIFTY_WRITEELAY
 
 请确保客户端和服务器上的时钟时间正确，方法是将它们与 NTP 服务器重新同步，然后重新加载页面。问题应该在之后消失。
 
-### 为什么我收到错误"TypeError: Cannot read property 'importKey' of undefined"
+### 为什么我收到错误"TypeError: Cannot read property 'importKey' of undefined"？
 
 这通常是因为您的Web浏览器不支持WebCrypt API，或者支持已被禁用。
 
-如果您使用的是谷歌浏览器，请使用HTTPS连接。当连接不安全时，Chrome将禁用WebCrypt和许多其他API。
+如果您使用的是谷歌浏览器，请使用HTTPS连接Sshwifty。当连接不安全时，Chrome将禁用WebCrypt和许多其他API。
 
 ### 我可以在以下子路径下为Sshwifty服务吗？https://my.domain/ssh
 不行。Sshwifty的设计基于一个假设，即它将作为给定主机名下的唯一服务运行，允许Web浏览器更好地执行其数据隔离规则。这非常重要，因为Sshwifty在本地保存用户数据。
@@ -325,18 +332,18 @@ SSHWIFTY_WRITEELAY
 
 如果这还不够，通过蓝牙或OTA连接物理键盘可能是更好的选择。通过这种方式，您可以像使用计算机控制台一样键入内容。
 
-## Credits
+## 感谢
 感谢 [Ryan Fortner](https://github.com/ryanfortner) 的语法修复
 
 ## 许可证
-该项目的代码在AGPL下获得许可，有关详细信息，请参阅 LICENSE.md 。
+该项目的代码在AGPL下获得许可，有关详细信息，请参阅 `LICENSE.md` 。
 
-本项目使用的第三方组件根据其各自的许可证进行许可。请参阅 DEPENDENCIES.md 以了解有关此项目使用的依赖项的更多信息，并阅读其版权声明。
+本项目使用的第三方组件根据其各自的许可证进行许可。请参阅 `DEPENDENCIES.md` 以了解有关此项目使用的依赖项的更多信息，并阅读其版权声明。
 
 ### 贡献
 这是一个业余爱好者项目，这意味着我没有太多时间投入其中。不好意思。
 
-发布后（然后您可以读取此文件），此项目将进入维护状态，其中包括执行错误修复和安全更新。但是，添加新功能不是该州的一部分。
+发布后（然后您可以读取此文件），此项目将进入维护状态，其中包括执行错误修复和安全更新。但是，添加新功能不是该项目的一部分。
 
 请不要发送任何拉取请求。如果您需要新功能，请分叉它，自己添加它，并像您自己的项目一样维护它。
 
@@ -344,4 +351,4 @@ SSHWIFTY_WRITEELAY
 
 感谢您的帮助！
 
-享受！
+享受吧！
