@@ -80,7 +80,7 @@ Please refer to it when you encounter any compile/build related issue.
 
 ### Deploy on the cloud
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/2826915729/sshwifty)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/2826915729/sshwifty-onekeyHeroku)
 
 To deploy this project onto the cloud, Google App Engine or Heroku for example,
 you need to first download the source code, then generate it locally before
