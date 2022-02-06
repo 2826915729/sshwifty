@@ -60,15 +60,14 @@
         <span id="connect-warning-icon" class="icon icon-warning1"></span>
         <div id="connect-warning-msg">
           <p>
-            <strong>An insecured service may steal your secrets.</strong>
-            Always exam the safety of the service before using it.
+            <strong>不安全的服务可能会窃取您的秘密。</strong>
+            在使用服务之前，请务必检查服务的安全性。
           </p>
 
           <p>
-            Sshwifty is a free software, you can deploy it on your own trusted
-            infrastructure.
+            Sshwifty是一个免费软件，你可以将其部署在你自己信任的基础设施上。
             <a href="https://github.com/nirui/sshwifty" target="_blank"
-              >Learn more</a
+              >了解更多信息</a
             >
           </p>
         </div>
